@@ -1,0 +1,26 @@
+﻿@model Park_Web.Models.Park_Ok
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>預約完成</title>
+</head>
+<body>
+    <div> 
+        <h2>您的預約已經完成了! 以下為您的資料</h2>
+        <br /><br />
+                <h1>型別:@Model.Ok_Type </h1>
+                <h1>座位:@Model.Ok_Seat</h1>
+                <h1>車牌:@Model.Ok_Carname</h1>
+                <h1>姓名:@Model.Ok_Name </h1>
+                <h1>密碼:@Model.Ok_Password</h1>
+                <h1>預約時間:@Model.Ok_Start</h1>
+                <h1>截止時間:@Model.Ok_End</h1>       
+    </div>
+</body>
+</html>

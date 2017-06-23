@@ -1,0 +1,39 @@
+﻿@model  List<Park_Web.Models.Park_SeatsStatus>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DayP</title>
+</head>
+<body>
+    <div>
+        <br />
+        <h1>租用日期:@ViewBag.Date</h1>
+        <h1>租用區域:@ViewBag.Area</h1>
+        <br />
+
+        <table border="1">
+            <tr>
+                @for (var i = 0; i < Model.Count; i++)
+                {
+                    if (Model[i].Park_SeatsStatus_Status == "0")
+                    {
+                        <td> @Model[i].Park_SeatsStatus_Seat<br /><img style="max-width:80px" class="img-responsive" src="https://cdn3.iconfinder.com/data/icons/car-icons-front-views/505/Mid-Size_Car_Front_View-512.png" /><br /><a class="btn btn-primary" href="~/Park/Create?seat=@Model[i].Park_SeatsStatus_Seat&date=@ViewBag.date&type=@ViewBag.type">可預定車位</a></td>
+                    }
+                    if (Model[i].Park_SeatsStatus_Status == "1")
+                    {
+                        <td> @Model[i].Park_SeatsStatus_Seat<br /><img style="max-width:80px" class="img-responsive" src="http://i.imgur.com/Lbfyfcb.png" /><br /><a class="btn btn-primary">已預定車位</a></td>
+                    }
+                }
+            </tr>
+        </table>
+        <br />
+    </div>
+</body>
+</html>

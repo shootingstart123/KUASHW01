@@ -1,0 +1,47 @@
+﻿@model List<Park_Database.Model.Park_Time>
+@{
+    ViewBag.Title = "PHome";
+}
+
+<h1>管理後台</h1>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered">
+                <thead></thead>
+                <tbody>
+                    <tr>
+                        <td>車牌</td>
+                        <td>座位</td>
+                        <td>預定時間</td>
+                        <td>截止時間</td>
+                        <td>創建時間</td>
+                    </tr>
+
+                    @for (var i = 0; i < Model.Count; i++)
+                    {
+                        <tr>
+                            <td>@Model[i].Time_Carname</td>
+                            <td>@Model[i].Time_Seat</td>
+                            <td>@Model[i].Time_Start</td>
+                            <td>@Model[i].Time_End</td>
+                            <td>@Model[i].Time_Createtime.ToString("yyyy/MM/dd HH:mm")</td>
+                            @*<td>
+                                    <img class="img-responsive" src="@Model[i].ImageUrl" />
+                                    <a href="/Home/Detail/@Model[i].ID">Link</a>
+                                </td>*@
+                            <td>
+                                <a class="btn btn-primary" href="~/Manager/Update/@Model[i].Time_Carname">編輯</a>
+                                <a class="btn btn-danger" href="~/Manager/Delete/@Model[i].Time_Carname">刪除</a>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+        </div>
+    </div>
+</div>

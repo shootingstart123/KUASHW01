@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Park_Database", "Park_DataBase\Park_Database.csproj", "{92B33792-0A5A-43CD-9991-84BFF161691F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Park_Cmd", "Park_cmd\Park_Cmd.csproj", "{B58B0019-C257-4CCD-B55E-FFC68D87DDBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Park_Web", "Park_Web\Park_Web.csproj", "{A0D1587C-3D86-47D5-9214-9267578E4DE8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92B33792-0A5A-43CD-9991-84BFF161691F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92B33792-0A5A-43CD-9991-84BFF161691F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92B33792-0A5A-43CD-9991-84BFF161691F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92B33792-0A5A-43CD-9991-84BFF161691F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B58B0019-C257-4CCD-B55E-FFC68D87DDBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B58B0019-C257-4CCD-B55E-FFC68D87DDBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B58B0019-C257-4CCD-B55E-FFC68D87DDBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B58B0019-C257-4CCD-B55E-FFC68D87DDBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0D1587C-3D86-47D5-9214-9267578E4DE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0D1587C-3D86-47D5-9214-9267578E4DE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0D1587C-3D86-47D5-9214-9267578E4DE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0D1587C-3D86-47D5-9214-9267578E4DE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,52 @@
+﻿@model Park_Web.Models.Park_DateArea
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Year</title>
+</head>
+<body>
+    <div>
+
+        <!--  <input type="button" value="連結名稱" onclick="location.href='要前往的網頁連結'">  -->
+        <br /><br />
+        <label>年租型</label>
+        <br /><br />
+        <form action="~/Home/Year" method="post">
+            <div class="form-group">
+                @Html.Label("日期", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.Park_DateArea_Date, "{0:yyyy-MM-dd}", new { type = "date", @Value = "2017-01-01" })
+                    @Html.ValidationMessageFor(model => model.Park_DateArea_Date, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br /><br />
+            <div class="form-group">
+                @Html.Label("區域", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("Park_DateArea_Area", (IEnumerable<SelectListItem>)ViewBag.Map_area, new { onchange = "tab(this)" })
+                    @Html.ValidationMessageFor(model => model.Park_DateArea_Area, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br /><br />
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="送出" class="btn btn-default" />
+                </div>
+            </div>
+            <br />
+        </form>    @*form 裡面要放input，因為瀏覽器會將form裡面的資料打包並送出*@
+
+
+    </div>
+</body>
+</html>
+
+<div>
+    @Html.ActionLink("Back", "Home", "Home")
+</div>
